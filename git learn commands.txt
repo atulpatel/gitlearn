@@ -1,0 +1,101 @@
+PS C:\Users\AtulPcBox\source\repos> cd .\gitlearn\
+PS C:\Users\AtulPcBox\source\repos\gitlearn> git init
+Initialized empty Git repository in C:/Users/AtulPcBox/source/repos/gitlearn/.git/
+PS C:\Users\AtulPcBox\source\repos\gitlearn> git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+PS C:\Users\AtulPcBox\source\repos\gitlearn> git add *.*
+PS C:\Users\AtulPcBox\source\repos\gitlearn> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   test file.txt
+
+PS C:\Users\AtulPcBox\source\repos\gitlearn> git commit  -m 'initial draft'
+[master (root-commit) c0b6f31] initial draft
+ 1 file changed, 2 insertions(+)
+ create mode 100644 test file.txt
+PS C:\Users\AtulPcBox\source\repos\gitlearn> git status
+On branch master
+nothing to commit, working tree clean
+PS C:\Users\AtulPcBox\source\repos\gitlearn> git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+To push to multiple remotes at once, configure a remote group using
+
+    git config remotes.<groupname> "<remote1> <remote2>"
+
+and then push using the group name
+
+    git push <groupname>
+
+PS C:\Users\AtulPcBox\source\repos\gitlearn> git remote -v
+PS C:\Users\AtulPcBox\source\repos\gitlearn> git remote add origin https://github.com/atulpatel/gitlearn.git
+PS C:\Users\AtulPcBox\source\repos\gitlearn> git remote -v
+origin  https://github.com/atulpatel/gitlearn.git (fetch)
+origin  https://github.com/atulpatel/gitlearn.git (push)
+PS C:\Users\AtulPcBox\source\repos\gitlearn> git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\AtulPcBox\source\repos\gitlearn> git status
+On branch master
+nothing to commit, working tree clean
+PS C:\Users\AtulPcBox\source\repos\gitlearn> git push --set-upstream origin master
+remote: Repository not found.
+fatal: repository 'https://github.com/atulpatel/gitlearn.git/' not found
+PS C:\Users\AtulPcBox\source\repos\gitlearn> git fetch origin
+remote: Repository not found.
+fatal: repository 'https://github.com/atulpatel/gitlearn.git/' not found
+PS C:\Users\AtulPcBox\source\repos\gitlearn> git remote -v
+origin  https://github.com/atulpatel/gitlearn.git (fetch)
+origin  https://github.com/atulpatel/gitlearn.git (push)
+PS C:\Users\AtulPcBox\source\repos\gitlearn> git fetch origin
+remote: Repository not found.
+fatal: repository 'https://github.com/atulpatel/gitlearn.git/' not found
+PS C:\Users\AtulPcBox\source\repos\gitlearn> git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+PS C:\Users\AtulPcBox\source\repos\gitlearn> git push --set-upstream origin master
+remote: Repository not found.
+fatal: repository 'https://github.com/atulpatel/gitlearn.git/' not found
+PS C:\Users\AtulPcBox\source\repos\gitlearn> git branch -a
+* master
+PS C:\Users\AtulPcBox\source\repos\gitlearn> git push -u origin master
+remote: Repository not found.
+fatal: repository 'https://github.com/atulpatel/gitlearn.git/' not found
+PS C:\Users\AtulPcBox\source\repos\gitlearn> git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 229 bytes | 229.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/atulpatel/gitlearn.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+PS C:\Users\AtulPcBox\source\repos\gitlearn> git status
+On branch master
+Your branch is up to date with 'origin/master'.
